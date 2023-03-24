@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: 212567579-deloy-apps-test-2
+  name: auto-deloy-apps-test-2
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
@@ -14,3 +14,5 @@ spec:
     path: helm-guestbook
     repoURL: https://github.com/argoproj/argocd-example-apps
     targetRevision: master
+  syncPolicy:
+    automated: {}
